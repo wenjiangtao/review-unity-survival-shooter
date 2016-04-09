@@ -85,28 +85,6 @@ NavMeshSettings:
     cellSize: 0.25
     manualCellSize: 1
   m_NavMeshData: {fileID: 23800000, guid: 9c593687d813243d2874a5d0c0310374, type: 2}
---- !u!1 &31473855 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 111674, guid: c4c8f756a5a434f78987459e791b32b2, type: 2}
-  m_PrefabInternal: {fileID: 582772353}
---- !u!114 &31473856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 31473855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 879854936}
-  damageImage: {fileID: 2112830327}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.43529412}
 --- !u!4 &31473861 stripped
 Transform:
   m_PrefabParentObject: {fileID: 485252, guid: c4c8f756a5a434f78987459e791b32b2, type: 2}
@@ -501,6 +479,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11442376, guid: c4c8f756a5a434f78987459e791b32b2, type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 879854936}
+    - target: {fileID: 11442376, guid: c4c8f756a5a434f78987459e791b32b2, type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 2112830327}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4c8f756a5a434f78987459e791b32b2, type: 2}
   m_IsPrefabParent: 0
@@ -995,6 +981,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1561215368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561215361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
 --- !u!4 &1561215369 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400074, guid: be66986effd141b4992d2d78be127139, type: 3}

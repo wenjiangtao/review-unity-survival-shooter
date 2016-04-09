@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
     CapsuleCollider capsuleCollider;
+    EnemyMovement enemyMovement;
     bool isDead;
     bool isSinking;
 
@@ -23,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio = GetComponent <AudioSource> ();
         hitParticles = GetComponentInChildren <ParticleSystem> ();
         capsuleCollider = GetComponent <CapsuleCollider> ();
+        enemyMovement = GetComponent <EnemyMovement> ();
 
         currentHealth = startingHealth;
     }
@@ -59,6 +61,7 @@ public class EnemyHealth : MonoBehaviour
     void Death ()
     {
         isDead = true;
+        enemyMovement.enabled = false;
 
         capsuleCollider.isTrigger = true;
 
